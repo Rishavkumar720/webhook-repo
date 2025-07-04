@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webhook Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 10px; border: 1px solid #ccc; }
+        th { background: #4CAF50; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Webhook Events Dashboard</h1>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Author</th>
+            <th>From Branch</th>
+            <th>To Branch</th>
+            <th>Time</th>
+        </tr>
+        {% for event in events %}
+        <tr>
+            <td>{{ event.type }}</td>
+            <td>{{ event.author }}</td>
+            <td>{{ event.from_branch if event.from_branch else "-" }}</td>
+            <td>{{ event.to_branch }}</td>
+            <td>{{ event.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
