@@ -11,9 +11,6 @@ webhook-repo/
 │ └── dashboard.html # Simple dashboard UI
 └── requirements.txt # Python dependencies
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -38,7 +35,7 @@ Edit
 ## 🚀 Setup Instructions
 
 ### 1️⃣ Clone the Repository
-```bash
+
 git clone https://github.com/YourUsername/webhook-repo.git
 cd webhook-repo
 2️⃣ Install Dependencies
@@ -47,9 +44,7 @@ Copy
 Edit
 pip install -r requirements.txt
 3️⃣ Create .env File
-ini
-Copy
-Edit
+
 MONGO_URI=mongodb+srv://<your-username>:<your-password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
 Replace with your MongoDB Atlas connection string.
 
@@ -59,13 +54,11 @@ Copy
 Edit
 python app.py
 5️⃣ Start Ngrok (in a separate terminal)
-bash
-Copy
-Edit
+
 ngrok http 5000
 Copy the Ngrok link (e.g., https://abcd1234.ngrok-free.app/webhook).
 
-🔗 GitHub Webhook Setup (For action-repo)
+GitHub Webhook Setup (For action-repo)
 Go to your action-repo → Settings → Webhooks → Add webhook.
 
 Payload URL: https://<your-ngrok>.ngrok-free.app/webhook
